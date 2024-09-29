@@ -7,7 +7,8 @@ require_relative 'yaml_buddy'
 class FlipFlap
   # Do NOT create an initialize method
 
-  attr_reader :data
+  include TsvBuddy
+  include YamlBubby
 
   def self.input_formats
     method_names = instance_methods.map(&:to_s)
